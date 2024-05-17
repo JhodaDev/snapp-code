@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Cascadia Code';
+  src:
+    url('/CascadiaCode.woff2') format('woff2'),
+    url('/CascadiaCode.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-grid {
+  @apply grid;
+  grid-template-columns: 17.5rem 1fr;
+}
+
+.isTyping::after {
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 0.125rem; /*2px*/
+  background-color: #75ddf0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: typing 1.2s infinite;
+}
+
+@keyframes typing {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 70%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+.ͼ16 .cm-activeLine {
+  @apply bg-transparent;
+}
+.editor-container {
+  font-size: 16px; /* Ajusta el tamaño de la letra aquí */
+  font-family: 'Cascadia Code', monospace;
+}
+
+.ͼ3 .cm-content {
+  font-family: 'Cascadia Code', monospace;
+  padding: 1.25rem;
+}
+
+.cm-editor.ͼ1.ͼ3.ͼ4.ͼ1m.ͼ16 {
+  @apply rounded-md;
+}
